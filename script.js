@@ -1,27 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburgerBtn = document.getElementById("hamburger-btn");
-  const closeBtn = document.getElementById("close-btn");
-  const navMenu = document.getElementById("nav-menu");
-  const overlay = document.getElementById("overlay");
+
   const darkModeToggle = document.getElementById("dark-mode-toggle");
   const body = document.body;
 
+
   const enableDarkMode = () => {
     body.classList.add("dark-mode");
-    localStorage.setItem("darkMode", "enabled");
+    localStorage.setItem("darkMode", "enabled"); 
   };
+
 
   const disableDarkMode = () => {
     body.classList.remove("dark-mode");
-    localStorage.setItem("darkMode", "disabled");
+    localStorage.setItem("darkMode", "disabled"); 
   };
 
+
   if (localStorage.getItem("darkMode") === "enabled") {
-    enableDarkMode();
+    enableDarkMode(); 
     if (darkModeToggle) {
-      darkModeToggle.checked = true;
+      darkModeToggle.checked = true; 
     }
   }
+
 
   if (darkModeToggle) {
     darkModeToggle.addEventListener("change", () => {
@@ -33,6 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const closeBtn = document.getElementById("close-btn");
+  const navMenu = document.getElementById("nav-menu");
+  const overlay = document.getElementById("overlay");
+
   if (hamburgerBtn && navMenu && overlay && closeBtn) {
     const toggleMenu = () => {
       navMenu.classList.toggle("active");
@@ -43,4 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.addEventListener("click", toggleMenu);
     overlay.addEventListener("click", toggleMenu);
   }
+
+
 });
