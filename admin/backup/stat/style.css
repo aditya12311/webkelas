@@ -1,0 +1,302 @@
+/* --- Variabel Warna & Gaya Global --- */
+:root {
+  --primary-color: #3b82f6;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+  --warning-color: #f97316;
+  --bg-gradient-start: #f3f4f6;
+  --bg-gradient-end: #f3f4f6;
+  --card-bg-color: #ffffff;
+  --text-color: #1f2937;
+  --subtle-text-color: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.07);
+  --font-family: "Poppins", sans-serif;
+}
+
+body.dark-mode {
+  --bg-gradient-start: #111827;
+  --bg-gradient-end: #111827;
+  --card-bg-color: #1f2937;
+  --text-color: #f9fafb;
+  --subtle-text-color: #9ca3af;
+  --border-color: #374151;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-gradient-end);
+  color: var(--text-color);
+  transition: background 0.3s;
+}
+
+/* === BAGIAN LOGIN === */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--bg-gradient-start),
+    var(--bg-gradient-end)
+  );
+}
+
+.login-box {
+  background-color: var(--card-bg-color);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 400px;
+}
+/* ... (Gaya lain untuk login seperti .input-group, .login-button, dll.) ... */
+
+/* === BAGIAN PANEL ADMIN (DASHBOARD & STATISTIK) === */
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.dashboard-header p {
+  color: var(--subtle-text-color);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout-button {
+  background-color: var(--error-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #dc2626;
+}
+
+/* Kartu Statistik (Dashboard) */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: var(--card-bg-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  color: var(--subtle-text-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Konten Utama (Dashboard) */
+.main-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.content-card {
+  background-color: var(--card-bg-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.content-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Tabel Log (Dashboard) */
+.log-table-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.log-table th,
+.log-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.log-table th {
+  font-weight: 600;
+}
+
+.status {
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.status-success {
+  color: var(--success-color);
+  background-color: #d1fae5;
+}
+
+.status-fail {
+  color: var(--error-color);
+  background-color: #fee2e2;
+}
+
+body.dark-mode .status-success {
+  background-color: #059669;
+  color: white;
+}
+
+body.dark-mode .status-fail {
+  background-color: #b91c1c;
+  color: white;
+}
+
+/* --- GAYA KHUSUS HALAMAN STATISTIK --- */
+.back-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #2563eb;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.chart-container {
+  position: relative;
+  height: 350px;
+}
+
+@media (min-width: 992px) {
+  .chart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chart-full-width {
+    grid-column: 1 / -1;
+  }
+  .chart-container {
+    height: 400px;
+  }
+  .main-content-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode Toggle (Umum) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 28px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}

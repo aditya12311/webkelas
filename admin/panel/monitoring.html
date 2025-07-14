@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Monitoring | INSIDER</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="dashboard-header">
+        <div class="header-welcome">
+          <h1>Admin Monitoring Dashboard</h1>
+          <p>Ringkasan aktivitas dan statistik website kelas INSIDER.</p>
+        </div>
+        <div class="header-controls">
+          <label class="switch">
+            <input type="checkbox" id="darkModeToggle" />
+            <span class="slider"></span>
+          </label>
+          <button id="logoutButton" class="logout-button">Logout</button>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <h3>Jumlah Siswa</h3>
+          <p class="stat-number">40</p>
+        </div>
+        <div class="stat-card">
+          <h3>Pengumuman</h3>
+          <p class="stat-number" id="announcement-count">12</p>
+        </div>
+        <div class="stat-card">
+          <h3>Pesan Masuk</h3>
+          <p class="stat-number" id="message-count">5</p>
+        </div>
+        <div class="stat-card">
+          <h3>Kunjungan Hari Ini</h3>
+          <p class="stat-number" id="visitor-count">128</p>
+        </div>
+      </section>
+
+      <div class="main-content-grid">
+        <div class="content-card">
+          <h3>Aktivitas Login Terakhir</h3>
+          <div class="log-table-container">
+            <table class="log-table">
+              <thead>
+                <tr>
+                  <th>Waktu</th>
+                  <th>IP Address</th>
+                  <th>Username</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="logTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h3>Statistik Gender</h3>
+          <div class="chart-container">
+            <canvas id="genderChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="monitoring.js"></script>
+  </body>
+</html>

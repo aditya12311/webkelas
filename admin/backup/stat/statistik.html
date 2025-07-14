@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistik Kelas | INSIDER</title>
+    <!-- Gunakan style.css yang sama dengan login dan dashboard -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Library Chart.js dari CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="dashboard-header">
+        <div class="header-welcome">
+          <h1>Statistik Kelas INSIDER</h1>
+          <p>Analisis visual berdasarkan data siswa kelas.</p>
+        </div>
+        <div class="header-controls">
+          <label class="switch">
+            <input type="checkbox" id="darkModeToggle" />
+            <span class="slider"></span>
+          </label>
+          <button id="backButton" class="back-button">
+            Kembali ke Dashboard
+          </button>
+        </div>
+      </header>
+
+      <!-- Grid untuk menampung grafik -->
+      <main class="chart-grid">
+        <!-- Grafik Statistik Gender -->
+        <div class="content-card">
+          <h3>Statistik Gender</h3>
+          <div class="chart-container">
+            <canvas id="genderChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Grafik Statistik Hobi -->
+        <div class="content-card chart-full-width">
+          <h3>Statistik Hobi Siswa</h3>
+          <div class="chart-container">
+            <canvas id="hobbyChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Grafik Statistik Asal Wilayah -->
+        <div class="content-card chart-full-width">
+          <h3>Statistik Asal Wilayah</h3>
+          <div class="chart-container">
+            <canvas id="regionChart"></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Hubungkan ke file JavaScript baru -->
+    <script src="statistik.js"></script>
+  </body>
+</html>
