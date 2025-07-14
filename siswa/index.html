@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Siswa | INSIDER</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="title-section">
+          <h1>Data Siswa INSIDER</h1>
+          <p>Informatic Six Desired Generousity</p>
+        </div>
+        <div class="controls">
+          <a href="../dash/index.html" class="back-button"
+            >Kembali ke Dashboard</a
+          >
+
+          <label class="switch">
+            <input type="checkbox" id="darkModeToggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </header>
+
+      <div class="search-container">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Cari berdasarkan nama atau nomor absen..."
+        />
+      </div>
+
+      <main id="student-grid" class="grid-container"></main>
+
+      <div class="pagination-container">
+        <button id="prev-button" class="pagination-button" disabled>
+          Sebelumnya
+        </button>
+        <span id="page-info"></span>
+        <button id="next-button" class="pagination-button">Selanjutnya</button>
+      </div>
+
+      <footer>
+        <p>INSIDER - Informatic Six Desired Generousity</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

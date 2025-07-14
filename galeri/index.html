@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri Kenangan | INSIDER</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <h1>Galeri Kenangan INSIDER</h1>
+        <div class="controls">
+          <a href="../dash/index.html" class="back-button"
+            >Kembali ke Dashboard</a
+          >
+
+          <label class="switch">
+            <input type="checkbox" id="darkModeToggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </header>
+
+      <main id="gallery-grid" class="gallery-container">
+        <div class="gallery-item">
+          <img
+            src="https://placehold.co/600x400/3b82f6/ffffff?text=Studi+Tour"
+            alt="Studi Tour Bandung"
+          />
+          <div class="item-info">
+            <h3>Studi Tour Bandung</h3>
+            <p>15 Desember 2023</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://placehold.co/600x400/10b981/ffffff?text=HUT+Sekolah"
+            alt="HUT Sekolah"
+          />
+          <div class="item-info">
+            <h3>HUT Sekolah</h3>
+            <p>20 Oktober 2023</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://placehold.co/600x400/ef4444/ffffff?text=Lomba+17an"
+            alt="Lomba 17an"
+          />
+          <div class="item-info">
+            <h3>Lomba 17an</h3>
+            <p>17 Agustus 2023</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://placehold.co/600x400/f97316/ffffff?text=Class+Meeting"
+            alt="Class Meeting"
+          />
+          <div class="item-info">
+            <h3>Class Meeting</h3>
+            <p>18 Juni 2023</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://placehold.co/600x400/8b5cf6/ffffff?text=Buka+Bersama"
+            alt="Buka Bersama"
+          />
+          <div class="item-info">
+            <h3>Buka Bersama</h3>
+            <p>25 April 2023</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://placehold.co/600x400/ec4899/ffffff?text=Pentas+Seni"
+            alt="Pentas Seni"
+          />
+          <div class="item-info">
+            <h3>Pentas Seni</h3>
+            <p>12 Februari 2023</p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <p>INSIDER | Informatic Six Desired Generousity</p>
+      </footer>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-button">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

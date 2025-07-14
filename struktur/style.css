@@ -1,0 +1,192 @@
+/* --- Variabel Warna & Gaya Global --- */
+:root {
+  --primary-color: #3b82f6; /* Biru INSIDER */
+  --bg-color: #f3f4f6;
+  --card-bg-color: #ffffff;
+  --text-color: #1f2937;
+  --subtle-text-color: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --font-family: "Poppins", sans-serif;
+}
+
+body.dark-mode {
+  --bg-color: #111827;
+  --card-bg-color: #1f2937;
+  --text-color: #f9fafb;
+  --subtle-text-color: #9ca3af;
+  --border-color: #374151;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Layout Utama & Header --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* --- Grid Organisasi --- */
+.organization-grid {
+  display: grid;
+  gap: 1.5rem;
+  /* Grid responsif: 1 kolom di HP, 2 di tablet, 3 di desktop */
+  grid-template-columns: 1fr;
+}
+
+/* --- Kartu Jabatan --- */
+.card {
+  background-color: var(--card-bg-color);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  border: 5px solid var(--primary-color);
+  background-color: #fff; /* fallback jika gambar transparan */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--subtle-text-color);
+  margin-bottom: 0.25rem;
+}
+
+.card-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* --- Penyesuaian Grid untuk Layar Lebih Besar --- */
+@media (min-width: 640px) {
+  .organization-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Wali kelas mengambil 1 baris penuh */
+  .wali-kelas {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .organization-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Footer --- */
+.page-footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--subtle-text-color);
+}
+
+/* --- Dark Mode Toggle Switch --- */
+.controls {
+  display: flex;
+  align-items: center;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.controls {
+  gap: 1rem;
+}
+
+.back-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.back-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 28px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
+}

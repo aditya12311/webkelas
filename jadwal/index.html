@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadwal & Guru | INSIDER</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <h1>Jadwal & Guru Kelas INSIDER</h1>
+        <div class="controls">
+          <!-- TOMBOL BARU DITAMBAHKAN DI SINI -->
+          <a href="../dash/index.html" class="back-button"
+            >Kembali ke Dashboard</a
+          >
+
+          <!-- Tombol Dark Mode -->
+          <label class="switch">
+            <input type="checkbox" id="darkModeToggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </header>
+
+      <main>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Hari</th>
+                <th>Jam 1-2<br /><small>07.30 - 09.00</small></th>
+                <th>Jam 3<br /><small>09.00 - 09.45</small></th>
+                <th>Jam 4<br /><small>09.45 - 10.30</small></th>
+                <th>Istirahat<br /><small>10.30 - 10.55</small></th>
+                <th>Jam 5<br /><small>10.55 - 11.40</small></th>
+                <th>Jam 6-8<br /><small>11.40 - 13.55</small></th>
+                <th>Sore<br /><small>16.30 - 18.00</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Jadwal Senin -->
+              <tr>
+                <td>Senin</td>
+                <td>UB & Kombel<br /><small>07.30 - 09.00</small></td>
+                <td colspan="2">
+                  FISIKA<br /><small>Luh Ari Dwi Jayanti, S.Pd.</small>
+                </td>
+                <td class="istirahat">Istirahat</td>
+                <td>
+                  AGAMA<br /><small>Dra. I Gusti Ayu Ketut Muliawati</small>
+                </td>
+                <td>
+                  BHS. BALI<br /><small>Ni Kadek Fitriani, S.Pd.B.</small>
+                </td>
+                <td>OLAHRAGA<br /><small>Kadek Agus Putrawan, S.Pd.</small></td>
+              </tr>
+              <!-- Jadwal Selasa -->
+              <tr>
+                <td>Selasa</td>
+                <td>SEJARAH<br /><small>Bayu Alhadad Efendi, S.Pd.</small></td>
+                <td>BK<br /><small>Ni Komang Suarni, S.Pd</small></td>
+                <td>
+                  INFORMATIKA<br /><small>Komang Gede Satria J., S.Pd.</small>
+                </td>
+                <td class="istirahat">Istirahat</td>
+                <td>
+                  INFORMATIKA<br /><small>Komang Gede Satria J., S.Pd.</small>
+                </td>
+                <td>MTK<br /><small>Ni Putu Wiwik Lisa P., S.Pd.</small></td>
+                <td>-</td>
+              </tr>
+              <!-- Jadwal Rabu -->
+              <tr>
+                <td>Rabu</td>
+                <td>
+                  SENI<br /><small>I Nyoman Juanda Putra, S.Sn.,M.Pd.</small>
+                </td>
+                <td colspan="2">
+                  FISIKA<br /><small>Luh Ari Dwi Jayanti, S.Pd.</small>
+                </td>
+                <td class="istirahat">Istirahat</td>
+                <td>
+                  BIOLOGI<br /><small
+                    >Ni Made Deasy Dewayanti, S.Si.,M.Pd.</small
+                  >
+                </td>
+                <td>
+                  MTKTL<br /><small>Ni Pande Kadek Ayu Pratiwi, S.Pd.</small>
+                </td>
+                <td>-</td>
+              </tr>
+              <!-- Jadwal Kamis -->
+              <tr>
+                <td>Kamis</td>
+                <td>
+                  BIOLOGI<br /><small
+                    >Ni Made Deasy Dewayanti, S.Si.,M.Pd.</small
+                  >
+                </td>
+                <td colspan="2">
+                  INFORMATIKA<br /><small>Komang Gede Satria J., S.Pd.</small>
+                </td>
+                <td class="istirahat">Istirahat</td>
+                <td>
+                  MTKTL<br /><small>Ni Pande Kadek Ayu Pratiwi, S.Pd.</small>
+                </td>
+                <td>PPKN<br /><small>Ni Putu Aridiantari, S.Pd.</small></td>
+                <td>-</td>
+              </tr>
+              <!-- Jadwal Jumat -->
+              <tr>
+                <td>Jumat</td>
+                <td colspan="2">
+                  BHS. INGGRIS<br /><small>I Nyoman Budiarta, S.Pd.,Gr.</small>
+                </td>
+                <td>PKWU<br /><small>Ni Luh Putu Mariani, S.Pd.</small></td>
+                <td class="istirahat">Istirahat</td>
+                <td>PKWU<br /><small>Ni Luh Putu Mariani, S.Pd.</small></td>
+                <td>
+                  BHS. INDO<br /><small>Putu Eka Dewi Fajarwati, S.Pd.</small>
+                </td>
+                <td>-</td>
+              </tr>
+              <!-- Jadwal Sabtu -->
+              <tr>
+                <td>Sabtu</td>
+                <td>SASBE / EKSTRA<br /><small>07.30 - 09.00</small></td>
+                <td colspan="5">P5_XI<br /><small>09.00 - 13.10</small></td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <p>INSIDER | Informatic Six Desired Generousity</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
