@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | INSIDER</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <svg
+          class="logo-svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2L2 7V17L12 22L22 17V7L12 2Z"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2 7L12 12L22 7"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M12 12V22"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <h1 class="header-title">INSIDER</h1>
+      </div>
+      <button id="hamburger-btn" class="hamburger-menu" aria-label="Buka menu">
+        ☰
+      </button>
+    </header>
+
+    <nav id="nav-menu" class="nav-panel">
+      <button id="close-btn" class="close-menu" aria-label="Tutup menu">
+        &times;
+      </button>
+      <ul>
+        <li><a href="../siswa/index.html">Data Siswa</a></li>
+        <li><a href="../struktur/index.html">Struktur Kelas</a></li>
+        <li><a href="../jadwal/index.html">Jadwal & Guru</a></li>
+        <li><a href="../galeri/index.html">Galeri Kenangan</a></li>
+        <li><a href="#suggestion-form-anchor">Form Saran</a></li>
+        <li class="dark-mode-toggle-container">
+          <span>Mode Gelap</span>
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle" />
+            <span class="slider round"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+    <div id="overlay" class="overlay"></div>
+
+    <main class="container">
+      <section class="hero">
+        <h2 class="main-title">INSIDER</h2>
+        <p class="subtitle">Informatic Six Desired Generousity</p>
+      </section>
+      <div class="dashboard-grid">
+        <div class="widget">
+          <h3>Pengumuman Terkini</h3>
+          <div class="card">
+            <h4>Tugas Pemrograman Web</h4>
+            <p>
+              Jangan lupa kumpulkan tugas membuat portofolio pribadi paling
+              lambat hari Jumat. Link ada di GCR.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Kerja Bakti Kelas</h4>
+            <p>
+              Hari Sabtu akan diadakan kerja bakti untuk membersihkan lab
+              komputer. Wajib hadir.
+            </p>
+          </div>
+        </div>
+        <div class="widget">
+          <h3>Agenda Minggu Ini</h3>
+          <ul class="agenda-list">
+            <li><span>Senin:</span> Presentasi Kelompok Jaringan Komputer</li>
+            <li><span>Rabu:</span> Ulangan Harian Matematika Diskrit</li>
+            <li><span>Jumat:</span> Batas Akhir Pengumpulan Tugas Web</li>
+          </ul>
+        </div>
+        <div class="widget" id="suggestion-form-anchor">
+          <h3>Kotak Saran</h3>
+          <form class="suggestion-form">
+            <div class="form-group">
+              <label for="nama">Nama (Opsional)</label
+              ><input type="text" id="nama" placeholder="Anonim" />
+            </div>
+            <div class="form-group">
+              <label for="pesan">Pesan atau Saran</label
+              ><textarea
+                id="pesan"
+                rows="4"
+                placeholder="Tuliskan saran Anda di sini..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Kirim Saran</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="quote">"The best way to predict the future is to create it."</p>
+
+      <div class="social-icons">
+        <a
+          href="https://www.instagram.com/insiderr.ekasma?igsh=ZDZ6cGFnemFqNW15"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.tiktok.com/@insiderekasma?_t=ZS-8y0bc6k5VRN&_r=1"
+          target="_blank"
+          aria-label="TikTok"
+        >
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
